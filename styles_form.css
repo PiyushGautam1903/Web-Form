@@ -1,0 +1,59 @@
+/* Custom styles that extend Tailwind */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00F2D3;
+    border-radius: 4px;
+}
+
+/* Range slider customization */
+input[type="range"] {
+    -webkit-appearance: none;
+    height: 4px;
+    background: #374151;
+    border-radius: 2px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #00F2D3;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+/* Custom cursor */
+.cursor {
+    transition: transform 0.2s ease;
+    pointer-events: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .form-container {
+        padding: 1.5rem;
+    }
+    
+    .radio-group, .checkbox-group {
+        grid-template-columns: 1fr;
+    }
+}
